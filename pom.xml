@@ -5,14 +5,17 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <distributionManagement>
-    <repository>
-        <uniqueVersion>false</uniqueVersion>
-        <id>corp1</id>
-        <name>todolist</name>
-        <url>https://github.com/justinmiles-hub/todolist</url>
-        <layout>default</layout>
-    </repository>
-</distributionManagement>
+		<repository>
+			<id>local-nexus</id>
+			<layout>default</layout>
+			<url>http://nexus/repository/maven-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>local-nexus</id>
+                        <layout>default</layout>
+			<url>http://nexus/repository/maven-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
   <dependencies>
     <dependency>
       <groupId>org.apache.tomcat</groupId>
